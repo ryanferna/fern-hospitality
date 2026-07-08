@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+:root {
+  --bg:          #0d1a11;
+  --bg-2:        #111f16;
+  --bg-3:        #162b1c;
+  --green:       #193629;
+  --green-mid:   #1e4030;
+  --gold:        #a9844d;
+  --gold-light:  #c9a97a;
+  --ivory:       #f4efe6;
+  --ivory-dim:   rgba(244, 239, 230, 0.55);
+  --ivory-faint: rgba(244, 239, 230, 0.25);
+  --ink:         #151816;
+  --rule:        rgba(244, 239, 230, 0.1);
+  --rule-dark:   rgba(25, 54, 41, 0.15);
+}
+
+@theme inline {
+  --color-bg:          var(--bg);
+  --color-bg-2:        var(--bg-2);
+  --color-bg-3:        var(--bg-3);
+  --color-green:       var(--green);
+  --color-gold:        var(--gold);
+  --color-ivory:       var(--ivory);
+  --font-display:      var(--font-bodoni);
+  --font-sans:         var(--font-jost);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--ivory);
+  font-family: var(--font-jost), system-ui, sans-serif;
+  font-weight: 300;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Utility classes ── */
+
+.display {
+  font-family: var(--font-bodoni), Georgia, serif;
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+}
+
+.eyebrow {
+  font-family: var(--font-jost), sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* Pill buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.8rem;
+  border-radius: 999px;
+  font-family: var(--font-jost), sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  transition: transform 240ms ease, box-shadow 240ms ease, background 240ms ease, color 240ms ease;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--ivory);
+  color: var(--bg);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.25);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.35);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--ivory);
+  border: 1px solid rgba(244, 239, 230, 0.3);
+}
+.btn-outline:hover {
+  transform: translateY(-2px);
+  border-color: rgba(244, 239, 230, 0.7);
+  background: rgba(244, 239, 230, 0.05);
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: var(--bg);
+  box-shadow: 0 2px 16px rgba(169,132,77,0.25);
+}
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(169,132,77,0.4);
+}
+
+/* Thin rule */
+.rule { border: none; border-top: 1px solid var(--rule); }
+.rule-dark { border: none; border-top: 1px solid var(--rule-dark); }
+
+/* Section spacing */
+.section { padding: 4rem 0; }
+.section-lg { padding: 5rem 0; }
+
+@media (min-width: 768px) {
+  .section { padding: 6rem 0; }
+  .section-lg { padding: 7rem 0; }
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+@media (min-width: 768px) {
+  .container { padding: 0 3.5rem; }
+}
