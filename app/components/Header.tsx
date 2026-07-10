@@ -44,7 +44,7 @@ export default function Header() {
           <Link href="/" className="flex flex-col leading-none">
             <span
               className="text-[var(--ivory)] tracking-tight"
-              style={{ fontFamily: "var(--font-bodoni)", fontSize: "1.15rem", fontWeight: 400 }}
+              style={{ fontFamily: "var(--font-bodoni)", fontSize: "1.5rem", fontWeight: 400 }}
             >
               Fern Hospitality
             </span>

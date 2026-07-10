@@ -20,7 +20,7 @@ export default function ContactPage() {
           <p className="eyebrow mb-10">Get in Touch</p>
           <h1
             className="display text-[var(--ivory)]"
-            style={{ fontSize: "clamp(3rem, 7vw, 7rem)", maxWidth: "16ch", lineHeight: 1.05 }}
+            style={{ fontSize: "clamp(2rem, 4vw, 4.5rem)", maxWidth: "16ch", lineHeight: 1.05 }}
           >
             Let&apos;s talk about your F&amp;B performance.
           </h1>

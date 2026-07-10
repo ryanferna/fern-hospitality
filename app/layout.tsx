@@ -39,8 +39,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="flex-1">{children}</main>
 
         <footer style={{ background: "var(--bg-2)", borderTop: "1px solid var(--rule)" }}>
-          <div className="container py-20 md:py-24">
-            <div className="grid md:grid-cols-12 gap-12 md:gap-8 mb-20">
+          <div className="container py-12 md:py-14">
+            <div className="grid md:grid-cols-12 gap-12 md:gap-8 mb-12">
               {/* Brand col */}
               <div className="md:col-span-5">
                 <Link href="/" className="inline-flex flex-col mb-6">

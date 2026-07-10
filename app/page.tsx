@@ -26,16 +26,16 @@ export default function HomePage() {
   return (
     <>
       {/* ── HERO ── */}
-      <section className="relative min-h-screen flex flex-col justify-end" style={{ background: "var(--bg)" }}>
+      <section className="relative min-h-screen flex flex-col justify-center" style={{ background: "var(--bg)" }}>
         <div
           className="absolute inset-0 pointer-events-none"
           style={{ background: "radial-gradient(ellipse 80% 60% at 65% 40%, rgba(30,64,48,0.6) 0%, transparent 70%)" }}
         />
-        <div className="container relative pb-16 pt-40">
+        <div className="container relative pb-10 pt-28">
           <p className="eyebrow mb-10">New York City · Luxury Hospitality Performance</p>
           <h1
             className="display text-[var(--ivory)] mb-10"
-            style={{ fontSize: "clamp(3.5rem, 8.5vw, 8rem)", maxWidth: "14ch" }}
+            style={{ fontSize: "clamp(2.8rem, 6.5vw, 7rem)", maxWidth: "14ch" }}
           >
             Luxury service.<br />
             <em>Sharper economics.</em>
@@ -59,12 +59,12 @@ export default function HomePage() {
       </section>
 
       {/* ── PHILOSOPHY STRIP ── */}
-      <section style={{ background: "var(--bg-2)", borderBottom: "1px solid var(--rule)" }}>
-        <div className="container py-16 md:py-20 grid md:grid-cols-12 gap-8 md:gap-0 items-center">
+      <section className="section" style={{ background: "var(--bg-2)", borderBottom: "1px solid var(--rule)" }}>
+        <div className="container grid md:grid-cols-12 gap-8 md:gap-0 items-center">
           <p className="eyebrow md:col-span-2" style={{ color: "var(--gold)" }}>The Principle</p>
           <p
-            className="display text-[var(--ivory)] md:col-span-7 md:col-start-5"
-            style={{ fontSize: "clamp(1.6rem, 3vw, 2.6rem)", fontStyle: "italic", lineHeight: 1.3 }}
+            className="display text-[var(--ivory)] md:col-span-9 md:col-start-4"
+            style={{ fontSize: "clamp(1.1rem, 1.65vw, 1.6rem)", fontStyle: "italic", lineHeight: 1.3 }}
           >
             &ldquo;Data-driven refinement for operators who measure what matters.&rdquo;
           </p>
@@ -172,7 +172,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-12 gap-12 md:gap-0">
             <div className="md:col-span-5">
               <p className="eyebrow mb-8">Illustrative Impact</p>
-              <h2 className="display text-[var(--ivory)] mb-8" style={{ fontSize: "clamp(2rem, 4vw, 3.2rem)" }}>
+              <h2 className="display mb-8" style={{ fontSize: "clamp(2.2rem, 4.5vw, 3.6rem)", color: "var(--ivory-dim)" }}>
                 A representative six-month margin story.
               </h2>
               <p className="display text-[var(--gold)]" style={{ fontSize: "clamp(3rem, 6vw, 5.5rem)", lineHeight: 1 }}>$535k</p>
@@ -185,19 +185,19 @@ export default function HomePage() {
               <table className="w-full text-sm">
                 <thead>
                   <tr style={{ borderBottom: "1px solid var(--rule)" }}>
-                    <th className="text-left pb-4 font-light text-xs tracking-widest uppercase" style={{ color: "var(--ivory-faint)" }}>Metric</th>
-                    <th className="text-right pb-4 font-light text-xs tracking-widest uppercase" style={{ color: "var(--ivory-faint)" }}>Before</th>
+                    <th className="text-left pb-4 font-light text-xs tracking-widest uppercase" style={{ color: "var(--ivory-dim)" }}>Metric</th>
+                    <th className="text-right pb-4 font-light text-xs tracking-widest uppercase" style={{ color: "var(--ivory-dim)" }}>Before</th>
                     <th className="text-right pb-4 font-light text-xs tracking-widest uppercase" style={{ color: "var(--gold)" }}>After</th>
-                    <th className="text-right pb-4 font-light text-xs tracking-widest uppercase hidden md:table-cell" style={{ color: "var(--ivory-faint)" }}>Impact</th>
+                    <th className="text-right pb-4 font-light text-xs tracking-widest uppercase hidden md:table-cell" style={{ color: "var(--ivory-dim)" }}>Impact</th>
                   </tr>
                 </thead>
                 <tbody>
                   {impactRows.map((r, i) => (
                     <tr key={r.metric} style={{ borderBottom: i < impactRows.length - 1 ? "1px solid var(--rule)" : "none" }}>
                       <td className="py-5 font-light text-[var(--ivory)]">{r.metric}</td>
-                      <td className="py-5 text-right font-light" style={{ color: "var(--ivory-faint)" }}>{r.before}</td>
+                      <td className="py-5 text-right font-light" style={{ color: "var(--ivory-dim)" }}>{r.before}</td>
                       <td className="py-5 text-right font-medium" style={{ color: "var(--gold-light)" }}>{r.after}</td>
-                      <td className="py-5 text-right text-xs font-light hidden md:table-cell" style={{ color: "var(--ivory-faint)" }}>{r.delta}</td>
+                      <td className="py-5 text-right text-sm font-light hidden md:table-cell" style={{ color: "var(--ivory-dim)" }}>{r.delta}</td>
                     </tr>
                   ))}
                 </tbody>
